@@ -80,5 +80,16 @@ class Collect
         array_splice($idx, $length);
         return $this;
     }
+
+    public function implode(string $separator): string
+    {
+        return implode("$separator",$this->array);
+    }
+
+    public function sort(): Collect
+    {
+        sort($this->array);
+        return $this;
+    }
 }
 
